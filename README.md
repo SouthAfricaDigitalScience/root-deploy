@@ -2,3 +2,7 @@
 # ROOT-deploy
 
 scripts for building and testing root.
+
+# Versions
+
+  * v6.06.02
