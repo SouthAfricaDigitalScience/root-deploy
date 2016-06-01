@@ -14,7 +14,7 @@ module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
 module add hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-1.8.8
 
-SOURCE_FILE=${NAME}_${VERSION}.tar.gz
+SOURCE_FILE=${NAME}_${VERSION}.source.tar.gz
 
 
 mkdir -p ${WORKSPACE}
