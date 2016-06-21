@@ -6,7 +6,7 @@ module add deploy
 module add zlib
 module add gcc/${GCC_VERSION}
 module add  gsl/2.1
-module add python/2.6.9-gcc-${GCC_VERSION}
+module add python/2.7.11-gcc-${GCC_VERSION}
 module add cfitsio
 module add openssl/1.0.2g
 module add sqlite
