@@ -2,15 +2,15 @@
 . /etc/profile.d/modules.sh
 module load ci
 module add zlib
+module add cmake
 module add gcc/${GCC_VERSION}
-module add  gsl/2.1
+module add gsl/2.1
 module add python/2.7.11-gcc-${GCC_VERSION}
 module add cfitsio
 module add openssl/1.0.2g
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
-module add hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-1.8.8
 
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 #make check

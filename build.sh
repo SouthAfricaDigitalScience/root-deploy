@@ -3,19 +3,18 @@
 
 module add ci
 # dependencies
+module add cmake
 module add zlib
 module add gcc/${GCC_VERSION}
-module add  gsl/2.1
+module add gsl/2.1
 module add python/2.7.11-gcc-${GCC_VERSION}
 module add cfitsio
 module add openssl/1.0.2g
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
-module add hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-1.8.8
 
 SOURCE_FILE=${NAME}_v${VERSION}.source.tar.gz
-
 
 mkdir -p ${WORKSPACE}
 mkdir -p ${SRC_DIR}
@@ -41,24 +40,41 @@ fi
 tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-../configure --prefix=${SOFT_DIR} \
---enable-fftw3 \
---with-fftw3-incdir=${FFTW_DIR}/include \
---with-fftw3-libdir=${FFTW_DIR}/lib \
---with-python=$(which python3.5) \
---disable-x11 \
---enable-sqlite \
---with-sqlite-incdir=${SQLITE_DIR}/include \
---with-sqlite-libdir=${SQLITE_DIR}/lib \
---enable-mathmore \
---enable-genvector \
---enable-roofit \
---enable-shared \
---enable-table \
---enable-mathcore \
---enable-gsl-shared \
---with-gsl-incdir=${GSL_DIR}/include \
---with-gsl-libdir=${GSL_DIR}/lib \
---enable-fitsio \
---with-cfitsio-incdir=${CFITSIO_DIR}/include \
---with-cfitsio-libdir=${CFITSIO_DIR}/lib
+# ../configure --prefix=${SOFT_DIR} \
+# --enable-fftw3 \
+# --with-fftw3-incdir=${FFTW_DIR}/include \
+# --with-fftw3-libdir=${FFTW_DIR}/lib \
+# --with-python=$(which python3.5) \
+# --disable-x11 \
+# --enable-sqlite \
+# --with-sqlite-incdir=${SQLITE_DIR}/include \
+# --with-sqlite-libdir=${SQLITE_DIR}/lib \
+# --enable-mathmore \
+# --enable-genvector \
+# --enable-roofit \
+# --enable-shared \
+# --enable-table \
+# --enable-mathcore \
+# --enable-gsl-shared \
+# --with-gsl-incdir=${GSL_DIR}/include \
+# --with-gsl-libdir=${GSL_DIR}/lib \
+# --enable-fitsio \
+# --with-cfitsio-incdir=${CFITSIO_DIR}/include \
+# --with-cfitsio-libdir=${CFITSIO_DIR}/lib
+
+# Using CMAKE. See https://root.cern.ch/installing-root-source
+
+cmake ../ \
+-Dbuiltin_freetype=OFF \
+-Dbuiltin_zlib=OFF \
+-Dx11=OFF \
+-Dbuiltin_gsl=OFF \
+-Dgsl_shared=ON \
+-DGSL_DIR=${GSL_DIR}  \
+-Dbuiltin_cfitsio=OFF \
+-Dfitsio=ON \
+-DCFITSIO=${CFITSIO_DIR} \
+-Dfortran=ON \
+-Droofit=ON \
+-Droottest=ON \
+-Dtest=ON
