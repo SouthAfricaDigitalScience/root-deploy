@@ -4,12 +4,11 @@
 module add ci
 # dependencies
 module add cmake
-module add zlib
 module add gcc/${GCC_VERSION}
-module add gsl/2.1
-module add python/2.7.11-gcc-${GCC_VERSION}
+module add gsl/2.3
+module add python/2.7.13-gcc-${GCC_VERSION}
 module add cfitsio
-module add openssl/1.0.2g
+module add openssl/1.0.2j
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
@@ -66,7 +65,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 
 cmake ../ \
 -Dbuiltin_freetype=OFF \
--Dbuiltin_zlib=OFF \
+-Dbuiltin_zlib=ON \
 -Dx11=OFF \
 -Dbuiltin_gsl=OFF \
 -Dgsl_shared=ON \
