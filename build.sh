@@ -77,3 +77,5 @@ cmake ../ \
 -Droofit=ON \
 -Droottest=ON \
 -Dtest=ON
+
+make

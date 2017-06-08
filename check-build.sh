@@ -1,19 +1,18 @@
 #!/bin/bash -e
 . /etc/profile.d/modules.sh
 module load ci
-module add zlib
 module add cmake
 module add gcc/${GCC_VERSION}
-module add gsl/2.1
-module add python/2.7.11-gcc-${GCC_VERSION}
+module add gsl/2.3
+module add python/2.7.13-gcc-${GCC_VERSION}
 module add cfitsio
-module add openssl/1.0.2g
+module add openssl/1.0.2j
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
 
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-#make check
+make check
 
 echo $?
 
@@ -40,8 +39,8 @@ prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
 ) > modules/$VERSION
 
-mkdir -p ${LIBRARIES_MODULES}/${NAME}-gcc-${GCC_VERSION}
-cp modules/$VERSION-gcc-${GCC_VERSION} ${LIBRARIES_MODULES}/${NAME}
+mkdir -p ${LIBRARIES}/${NAME}-gcc-${GCC_VERSION}
+cp modules/$VERSION-gcc-${GCC_VERSION} ${LIBRARIES}/${NAME}
 
 module avail ${NAME}
 
