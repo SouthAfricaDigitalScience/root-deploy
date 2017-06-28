@@ -39,27 +39,6 @@ fi
 tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-# ../configure --prefix=${SOFT_DIR} \
-# --enable-fftw3 \
-# --with-fftw3-incdir=${FFTW_DIR}/include \
-# --with-fftw3-libdir=${FFTW_DIR}/lib \
-# --with-python=$(which python3.5) \
-# --disable-x11 \
-# --enable-sqlite \
-# --with-sqlite-incdir=${SQLITE_DIR}/include \
-# --with-sqlite-libdir=${SQLITE_DIR}/lib \
-# --enable-mathmore \
-# --enable-genvector \
-# --enable-roofit \
-# --enable-shared \
-# --enable-table \
-# --enable-mathcore \
-# --enable-gsl-shared \
-# --with-gsl-incdir=${GSL_DIR}/include \
-# --with-gsl-libdir=${GSL_DIR}/lib \
-# --enable-fitsio \
-# --with-cfitsio-incdir=${CFITSIO_DIR}/include \
-# --with-cfitsio-libdir=${CFITSIO_DIR}/lib
 
 # Using CMAKE. See https://root.cern.ch/installing-root-source
 

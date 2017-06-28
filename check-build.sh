@@ -31,7 +31,8 @@ proc ModulesHelp { } {
 
 module-whatis   "$NAME $VERSION."
 setenv       ROOT_VERSION       $VERSION
-setenv       ROOT_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+setenv       ROOT_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
+setenv       ROOTSYS         /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
 prepend-path LD_LIBRARY_PATH   $::env(ROOT_DIR)/lib
 prepend-path CFLAGS            "-I${ROOT_DIR}/include"
 prepend-path LDFLAGS           "-L${ROOT_DIR}/lib"
@@ -39,8 +40,8 @@ prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
 ) > modules/$VERSION
 
-mkdir -p ${LIBRARIES}/${NAME}-gcc-${GCC_VERSION}
-cp modules/$VERSION-gcc-${GCC_VERSION} ${LIBRARIES}/${NAME}
+mkdir -p ${HEP}/${NAME}-gcc-${GCC_VERSION}
+cp modules/$VERSION-gcc-${GCC_VERSION} ${HEP}/${NAME}
 
 module avail ${NAME}
 
