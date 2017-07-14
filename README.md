@@ -5,4 +5,6 @@ scripts for building and testing root.
 
 # Versions
 
+  * v5.34/34
   * v6.09.02
+  * v6.08
