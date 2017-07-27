@@ -20,6 +20,7 @@ rm -rf
 # Using CMAKE. See https://root.cern.ch/installing-root-source
 
 cmake ../ \
+-DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
 -Dbuiltin_zlib=ON \
 -DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
