@@ -14,7 +14,6 @@ module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
 
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-make check
 
 echo $?
 
