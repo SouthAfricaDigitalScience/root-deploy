@@ -37,14 +37,14 @@ elif [ -e ${SRC_DIR}/${SOURCE_FILE}.lock ] ; then
 else
   echo "continuing from previous builds, using source at " ${SRC_DIR}/${SOURCE_FILE}
 fi
-tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE}/${NAME}-${VERSION} --skip-old-files --strip-components=1
 mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
+tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE}/${NAME}-${VERSION} --skip-old-files --strip-components=1
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 
 # Using CMAKE. See https://root.cern.ch/installing-root-source
 
 cmake ../ \
--DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION}
+-DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
 -Dbuiltin_zlib=ON \
 -DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
