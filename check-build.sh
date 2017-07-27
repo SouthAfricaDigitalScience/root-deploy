@@ -39,9 +39,9 @@ prepend-path CFLAGS            "-I${ROOT_DIR}/include"
 prepend-path LDFLAGS           "-L${ROOT_DIR}/lib"
 prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
-) > modules/$VERSION
+) > modules/$VERSION-gcc-${GCC_VERSION}
 
-mkdir -p ${HEP}/${NAME}-gcc-${GCC_VERSION}
+mkdir -p ${HEP}/${NAME}
 cp modules/$VERSION-gcc-${GCC_VERSION} ${HEP}/${NAME}
 
 module avail ${NAME}
