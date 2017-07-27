@@ -65,7 +65,7 @@ prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
 ) > ${HEP}/${NAME}/${VERSION}-gcc-${GCC_VERSION}
 
-module add ${NAME}-gcc-${GCC_VERSION}
+module add ${NAME}/${VERSION}-gcc-${GCC_VERSION}
 source $ROOT_DIR/bin/thisroot.sh
 which root
 root -b -q

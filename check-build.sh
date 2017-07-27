@@ -46,7 +46,7 @@ cp modules/$VERSION-gcc-${GCC_VERSION} ${HEP}/${NAME}
 
 module avail ${NAME}
 
-module add ${NAME}-gcc-${GCC_VERSION}
+module add ${NAME}/${VERSION}-gcc-${GCC_VERSION}
 source $ROOT_DIR/bin/thisroot.sh
 which root
 root -b -q
