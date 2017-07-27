@@ -1,8 +1,10 @@
 #!/bin/bash -e
 . /etc/profile.d/modules.sh
+
 module load ci
-module add cmake
 module add gcc/${GCC_VERSION}
+module add cmake
+module add xz
 module add gsl/2.3
 module add python/2.7.13-gcc-${GCC_VERSION}
 module add cfitsio

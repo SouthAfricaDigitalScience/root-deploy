@@ -5,6 +5,7 @@ echo ${SOFT_DIR}
 module add deploy
 module add cmake
 module add gcc/${GCC_VERSION}
+module add xz
 module add gsl/2.3
 module add python/2.7.13-gcc-${GCC_VERSION}
 module add cfitsio
@@ -20,18 +21,23 @@ rm -rf
 
 cmake ../ \
 -Dbuiltin_freetype=OFF \
--Dbuiltin_zlib=OFF \
+-Dbuiltin_zlib=ON \
+-DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
+-DLZMA_LIBRARY=${XZ_DIR}/lib/liblz.so \
 -Dx11=OFF \
 -Dbuiltin_gsl=OFF \
 -Dgsl_shared=ON \
 -DGSL_DIR=${GSL_DIR}  \
 -Dbuiltin_cfitsio=OFF \
 -Dfitsio=ON \
+-DCFITSIO_INCLUDE_DIR=${CFITSIO_DIR}/include \
+-DCFITSIO_LIBRARY=${CFITSIO_DIR}/lib/libcfitsio.so \
 -DCFITSIO=${CFITSIO_DIR} \
 -Dfortran=ON \
 -Droofit=ON \
 -Droottest=ON \
 -Dtest=ON
+
 
 make install
 echo "Creating the modules file directory ${HEP}"
