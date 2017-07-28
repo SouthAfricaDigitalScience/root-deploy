@@ -49,4 +49,4 @@ module avail ${NAME}
 module add ${NAME}/${VERSION}-gcc-${GCC_VERSION}
 source $ROOT_DIR/bin/thisroot.sh
 which root.exe
-root -b -q
+root.exe -b -q
