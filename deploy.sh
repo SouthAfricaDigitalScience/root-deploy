@@ -67,5 +67,5 @@ MODULE_FILE
 
 module add ${NAME}/${VERSION}-gcc-${GCC_VERSION}
 source $ROOT_DIR/bin/thisroot.sh
-which root
+which root.exe
 root -b -q
