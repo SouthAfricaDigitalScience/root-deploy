@@ -24,7 +24,7 @@ cmake ../ \
 -Dbuiltin_freetype=OFF \
 -Dbuiltin_zlib=ON \
 -DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
--DLZMA_LIBRARY=${XZ_DIR}/lib/liblz.so \
+-DLZMA_LIBRARY=${XZ_DIR}/lib/liblzma.so \
 -Dx11=OFF \
 -Dbuiltin_gsl=OFF \
 -Dgsl_shared=ON \
@@ -55,8 +55,8 @@ proc ModulesHelp { } {
 
 module-whatis   "$NAME $VERSION : See https://github.com/SouthAfricaDigitalScience/ROOT-deploy"
 setenv ROOT_VERSION       $VERSION
-setenv ROOT_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$::env(GCC_VERSION)
-setenv ROOTSYS           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$::env(GCC_VERSION)
+setenv ROOT_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$GCC_VERSION
+setenv ROOTSYS           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$GCC_VERSION
 prepend-path LD_LIBRARY_PATH   $::env(ROOT_DIR)/lib
 prepend-path GCC_INCLUDE_DIR   $::env(ROOT_DIR)/include
 prepend-path CFLAGS            "-I${ROOT_DIR}/include"
