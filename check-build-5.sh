@@ -1,4 +1,5 @@
 #!/bin/bash -e
+# check build script for root 5
 . /etc/profile.d/modules.sh
 
 module load ci

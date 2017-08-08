@@ -1,4 +1,5 @@
 [![Build Status](http://ci.sagrid.ac.za/buildStatus/icon?job=root-deploy)](http://ci.sagrid.ac.za/job/root-deploy)
+
 # ROOT-deploy
 
 scripts for building and testing root.
@@ -8,6 +9,7 @@ scripts for building and testing root.
   * v5.34/34
   * v6.09.02
   * v6.08
+  * v6.10.00
 
 # Dependencies
 
@@ -28,322 +30,42 @@ The following options are enabled :
   - [x] freetype:
     - `FREETYPE_INCLUDE_DIR_freetype2:PATH=/data/ci-build/generic/centos6/x86_64/freetype/2.7.1/include/freetype2`
     -  `FREETYPE_LIBRARY_RELEASE:FILEPATH=/data/ci-build/generic/centos6/x86_64/freetype/2.7.1/lib/libfreetype.so`
-    -
-
-// Specify the directory containing lzma.h
-LZMA_INCLUDE_DIR:PATH=LZMA_INCLUDE_DIR-NOTFOUND
-
-// Specify the lzma library here.
-LZMA_LIBRARY:FILEPATH=LZMA_LIBRARY-NOTFOUND
-
-// Path to a program.
-PCRE_CONFIG_EXECUTABLE:FILEPATH=PCRE_CONFIG_EXECUTABLE-NOTFOUND
-
-// Path to a file.
-X11_ICE_INCLUDE_PATH:PATH=X11_ICE_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_ICE_LIB:FILEPATH=X11_ICE_LIB-NOTFOUND
-
-// Path to a file.
-X11_SM_INCLUDE_PATH:PATH=X11_SM_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_SM_LIB:FILEPATH=X11_SM_LIB-NOTFOUND
-
-// Path to a file.
-X11_X11_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a library.
-X11_X11_LIB:FILEPATH=/usr/lib64/libX11.so
-
-// Path to a file.
-X11_XRes_INCLUDE_PATH:PATH=X11_XRes_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_XRes_LIB:FILEPATH=X11_XRes_LIB-NOTFOUND
-
-// Path to a file.
-X11_XShm_INCLUDE_PATH:PATH=X11_XShm_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-X11_XSync_INCLUDE_PATH:PATH=X11_XSync_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-X11_XTest_INCLUDE_PATH:PATH=X11_XTest_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_XTest_LIB:FILEPATH=X11_XTest_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xaccessrules_INCLUDE_PATH:PATH=X11_Xaccessrules_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-X11_Xaccessstr_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_Xau_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a library.
-X11_Xau_LIB:FILEPATH=/usr/lib64/libXau.so
-
-// Path to a file.
-X11_Xcomposite_INCLUDE_PATH:PATH=X11_Xcomposite_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xcomposite_LIB:FILEPATH=X11_Xcomposite_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xcursor_INCLUDE_PATH:PATH=X11_Xcursor_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xcursor_LIB:FILEPATH=X11_Xcursor_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xdamage_INCLUDE_PATH:PATH=X11_Xdamage_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xdamage_LIB:FILEPATH=X11_Xdamage_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xdmcp_INCLUDE_PATH:PATH=X11_Xdmcp_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xdmcp_LIB:FILEPATH=X11_Xdmcp_LIB-NOTFOUND
-
-// Path to a library.
-X11_Xext_LIB:FILEPATH=X11_Xext_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xfixes_INCLUDE_PATH:PATH=X11_Xfixes_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xfixes_LIB:FILEPATH=X11_Xfixes_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xft_INCLUDE_PATH:PATH=X11_Xft_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xft_LIB:FILEPATH=X11_Xft_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xi_INCLUDE_PATH:PATH=X11_Xi_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xi_LIB:FILEPATH=X11_Xi_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xinerama_INCLUDE_PATH:PATH=X11_Xinerama_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xinerama_LIB:FILEPATH=X11_Xinerama_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xinput_INCLUDE_PATH:PATH=X11_Xinput_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xinput_LIB:FILEPATH=X11_Xinput_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xkb_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_Xkbfile_INCLUDE_PATH:PATH=X11_Xkbfile_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xkbfile_LIB:FILEPATH=X11_Xkbfile_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xkblib_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_Xlib_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_Xmu_INCLUDE_PATH:PATH=X11_Xmu_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xmu_LIB:FILEPATH=X11_Xmu_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xpm_INCLUDE_PATH:PATH=X11_Xpm_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xpm_LIB:FILEPATH=X11_Xpm_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xrandr_INCLUDE_PATH:PATH=X11_Xrandr_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xrandr_LIB:FILEPATH=X11_Xrandr_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xrender_INCLUDE_PATH:PATH=X11_Xrender_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xrender_LIB:FILEPATH=X11_Xrender_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xscreensaver_INCLUDE_PATH:PATH=X11_Xscreensaver_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xscreensaver_LIB:FILEPATH=X11_Xscreensaver_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xshape_INCLUDE_PATH:PATH=X11_Xshape_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-X11_Xt_INCLUDE_PATH:PATH=X11_Xt_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xt_LIB:FILEPATH=X11_Xt_LIB-NOTFOUND
-
-// Path to a file.
-X11_Xutil_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_Xv_INCLUDE_PATH:PATH=X11_Xv_INCLUDE_PATH-NOTFOUND
-
-// Path to a library.
-X11_Xv_LIB:FILEPATH=X11_Xv_LIB-NOTFOUND
-
-// Path to a library.
-X11_Xxf86misc_LIB:FILEPATH=X11_Xxf86misc_LIB-NOTFOUND
-
-// Path to a library.
-X11_Xxf86vm_LIB:FILEPATH=X11_Xxf86vm_LIB-NOTFOUND
-
-// Path to a file.
-X11_dpms_INCLUDE_PATH:PATH=X11_dpms_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-X11_xf86misc_INCLUDE_PATH:PATH=/usr/include
-
-// Path to a file.
-X11_xf86vmode_INCLUDE_PATH:PATH=X11_xf86vmode_INCLUDE_PATH-NOTFOUND
-
-// Path to a file.
-ZLIB_INCLUDE_DIR:PATH=/usr/include
-
-// Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
-
-// Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libz.so
-
-// Dataset manager for PROOF-based analysis facilities
-afdsmgrd:BOOL=OFF
-
-// AFS support, requires AFS libs and objects
-afs:BOOL=OFF
-
-// AliEn support, requires libgapiUI from ALICE
-alien:BOOL=ON
-
-// Enable all optional components
-all:BOOL=OFF
-
-// Image processing support, requires libAfterImage
-asimage:BOOL=ON
-
-// Include tiff support in image processing
-astiff:BOOL=ON
-
-// Bonjour support, requires libdns_sd and/or Avahi
-bonjour:BOOL=ON
-
-// Built included libAfterImage, or use system libAfterImage
-builtin_afterimage:BOOL=ON
-
-// Built the FITSIO library internally (downloading tarfile from the Web)
-builtin_cfitsio:BOOL=OFF
-
-// Built the Davix library internally (downloading tarfile from the Web)
-builtin_davix:BOOL=OFF
-
-// Built included libfreetype, or use system libfreetype
-builtin_freetype:BOOL=OFF
-
-// Built included libFTGL, or use system libftgl
-builtin_ftgl:BOOL=ON
-
-// Built included libGLEW, or use system libGLEW
-builtin_glew:BOOL=ON
-
-// Built the GSL library internally (downloading tarfile from the Web)
-builtin_gsl:BOOL=OFF
-
-//
-builtin_lzma:BOOL=ON
-
-// Build OpenSSL internally, or use system OpenSSL
-builtin_openssl:BOOL=OFF
-
-//
-builtin_pcre:BOOL=ON
-
-// Built the XROOTD internally (downloading tarfile from the Web)
-builtin_xrootd:BOOL=OFF
-
-// Built included libz, or use system libz
-builtin_zlib:BOOL=OFF
-
-// CASTOR support, requires libshift from CASTOR >= 1.5.2
-castor:BOOL=ON
-
-// Chirp support (Condor remote I/O), requires libchirp_client
-chirp:BOOL=ON
-
-// Build the libCintex Reflex interface library
-cintex:BOOL=ON
-
-// Enable new CLING C++ interpreter
-cling:BOOL=OFF
-
-// Use native Cocoa/Quartz graphics backend (MacOS X only)
-cocoa:BOOL=OFF
-
-// Build using C++11 compatible mode, requires gcc > 4.7.x or clang
-cxx11:BOOL=OFF
-
-// Build using C++14 compatible mode, requires gcc > 4.9.x or clang
-cxx14:BOOL=OFF
-
-// DavIx library for HTTP/WEBDAV access
-davix:BOOL=ON
-
-// dCache support, requires libdcap from DESY
-dcache:BOOL=ON
-
-// Turn on compiler exception handling capability
-exceptions:BOOL=ON
-
-// Explicitly link with all dependent libraries
-explicitlink:BOOL=ON
-
-// Fail the configure step if a required external package is missing
-fail-on-missing:BOOL=OFF
-
-// Fast Fourier Transform support, requires libfftw3
-fftw3:BOOL=ON
-
-// Read images and data from FITS files, requires cfitsio
-fitsio:BOOL=ON
-
-// Enable the Fortran components of ROOT
-fortran:BOOL=ON
-
-// GDML writer and reader
-gdml:BOOL=OFF
-
-// Build the new libGenVector library
-genvector:BOOL=ON
-
-// GFAL support, requires libgfal
-gfal:BOOL=ON
-
-// gLite support, requires libglite-api-wrapper v.3 from GSI (https://subversion.gsi.de/trac/dgrid/wiki)
-glite:BOOL=ON
+    - [ ] LZMA
+    - [ ] Perl regular expressions
+    - [ ] X11
+    - [ ] Zlib
+    - [ ] Dataset manager for PROOF-based analysis facilities
+    - [ ] AFS
+    - [ ] AliEn
+    - [X] asimage : ON, with TIFF support (builtin)
+    - [x] FITSIO (external)
+    - [ ] Davix OFF
+    - [ ] System FreeType
+    - [x] External GSL
+    - [ ] builtin_lzma:BOOL=ON
+    - [x] Build OpenSSL internally builtin_openssl:BOOL=OFF
+    - [ ] builtin_pcre:BOOL=ON
+    - [ ] builtin_xrootd:BOOL=OFF
+    - [ ] Built included libz, or use system libz builtin_zlib:BOOL=OFF
+    - [ ] CASTOR support, requires libshift from CASTOR >= 1.5.2
+    - [x] Chirp support (Condor remote I/O), requires libchirp_client chirp:BOOL=ON
+    - [x] Build the libCintex Reflex interface library cintex:BOOL=ON
+    - [ ] Enable new CLING C++ interpreter cling:BOOL=OFF
+    - [ ] Use native Cocoa/Quartz graphics backend (MacOS X only) cocoa:BOOL=OFF
+    - [ ] Build using C++11 compatible mode, requires gcc > 4.7.x or clang cxx11:BOOL=OFF
+    - [ ] Build using C++14 compatible mode, requires gcc > 4.9.x or clang cxx14:BOOL=OFF
+    - [x] DavIx library for HTTP/WEBDAV access davix:BOOL=ON
+    - [x] dCache support, requires libdcap from DESY dcache:BOOL=ON
+    - [x] Turn on compiler exception handling capability exceptions:BOOL=ON
+    - [x]  Explicitly link with all dependent libraries explicitlink:BOOL=ON
+    - [ ] Fail the configure step if a required external package is missing fail-on-missing:BOOL=OFF
+    - [x] Fast Fourier Transform support, requires libfftw3 fftw3:BOOL=ON
+    - [ ] Read images and data from FITS files, requires cfitsio fitsio:BOOL=ON
+    - [ ] Enable the Fortran components of ROOT fortran:BOOL=ON
+    - [x] GDML writer and reader gdml:BOOL=OFF
+    - [x] Build the new libGenVector library genvector:BOOL=ON
+    - [x] GFAL support, requires libgfal gfal:BOOL=ON
+    - [x] gLite support, requires libglite-api-wrapper v.3 from GSI (https://subversion.gsi.de/trac/dgrid/wiki) glite:BOOL=ON
 
 // Globus authentication support, requires Globus toolkit
 globus:BOOL=OFF

@@ -1,5 +1,5 @@
 #!/bin/bash -e
-# this should be run after check-build finishes.
+# deploy script for root 5
 . /etc/profile.d/modules.sh
 echo ${SOFT_DIR}
 module add deploy
