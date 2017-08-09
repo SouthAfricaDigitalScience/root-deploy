@@ -35,8 +35,8 @@ setenv       ROOT_VERSION       $VERSION
 setenv       ROOT_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
 setenv       ROOTSYS         /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
 prepend-path LD_LIBRARY_PATH   $::env(ROOT_DIR)/lib
-prepend-path CFLAGS            "-I${ROOT_DIR}/include"
-prepend-path LDFLAGS           "-L${ROOT_DIR}/lib"
+setenv CFLAGS            "-I${ROOT_DIR}/include $CFLAGS"
+setenv LDFLAGS           "-L${ROOT_DIR}/lib $LDFLAGS"
 prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
 ) > modules/$VERSION-gcc-${GCC_VERSION}

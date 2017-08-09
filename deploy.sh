@@ -19,10 +19,12 @@ echo "All tests have passed, will now build into ${SOFT_DIR}"
 rm -rf
 # Using CMAKE. See https://root.cern.ch/installing-root-source
 
-cmake ../ \
+cmake ../ -G"Unix Makefiles" \
 -DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
 -Dbuiltin_zlib=ON \
+-Dbuiltin_tbb=ON \
+-Dbuiltin_lzma=OFF \
 -DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
 -DLZMA_LIBRARY=${XZ_DIR}/lib/liblzma.so \
 -Dx11=OFF \
@@ -34,6 +36,7 @@ cmake ../ \
 -DCFITSIO_INCLUDE_DIR=${CFITSIO_DIR}/include \
 -DCFITSIO_LIBRARY=${CFITSIO_DIR}/lib/libcfitsio.so \
 -DCFITSIO=${CFITSIO_DIR} \
+-Dhdfs=OFF \
 -Dfortran=ON \
 -Droofit=ON \
 -Droottest=ON \

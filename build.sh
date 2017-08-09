@@ -13,7 +13,6 @@ module add openssl/1.0.2j
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
-module  add  hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-1.8.8
 module add openblas/0.2.19-gcc-${GCC_VERSION}
 
 SOURCE_FILE=${NAME}_v${VERSION}.source.tar.gz
@@ -62,9 +61,7 @@ cmake ../ -G"Unix Makefiles" \
 -DCFITSIO_INCLUDE_DIR=${CFITSIO_DIR}/include \
 -DCFITSIO_LIBRARY=${CFITSIO_DIR}/lib/libcfitsio.so \
 -DCFITSIO=${CFITSIO_DIR} \
--DHDFS_INCLUDE_DIR=${HDF5_DIR}/include \
--DHDFS_LIBRARY=${HDF5_DIR}/lib/libhdf5.so \
--Dhdfs=ON \
+-Dhdfs=OFF \
 -Dfortran=ON \
 -Droofit=ON \
 -Droottest=ON \
