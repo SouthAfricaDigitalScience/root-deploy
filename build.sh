@@ -13,6 +13,8 @@ module add openssl/1.0.2j
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
+module  add  hdf5/1.8.16-gcc-${GCC_VERSION}-mpi-1.8.8
+module add openblas/0.2.19-gcc-${GCC_VERSION}
 
 SOURCE_FILE=${NAME}_v${VERSION}.source.tar.gz
 
@@ -43,10 +45,12 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 
 # Using CMAKE. See https://root.cern.ch/installing-root-source
 
-cmake ../ \
+cmake ../ -G"Unix Makefiles" \
 -DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
 -Dbuiltin_zlib=ON \
+-Dbuiltin_tbb=ON \
+-Dbuiltin_lzma=OFF \
 -DLZMA_INCLUDE_DIR=${XZ_DIR}/include \
 -DLZMA_LIBRARY=${XZ_DIR}/lib/liblzma.so \
 -Dx11=OFF \
@@ -58,9 +62,12 @@ cmake ../ \
 -DCFITSIO_INCLUDE_DIR=${CFITSIO_DIR}/include \
 -DCFITSIO_LIBRARY=${CFITSIO_DIR}/lib/libcfitsio.so \
 -DCFITSIO=${CFITSIO_DIR} \
+-DHDFS_INCLUDE_DIR=${HDF5_DIR}/include \
+-DHDFS_LIBRARY=${HDF5_DIR}/lib/libhdf5.so \
+-Dhdfs=ON \
 -Dfortran=ON \
 -Droofit=ON \
 -Droottest=ON \
 -Dtest=ON
 
-make
+OS="Linux" make
