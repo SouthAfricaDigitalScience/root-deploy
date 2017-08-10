@@ -1,6 +1,7 @@
 #!/bin/bash -e
 # this should be run after check-build finishes.
 . /etc/profile.d/modules.sh
+module add  deploy
 module add cmake
 module add gcc/${GCC_VERSION}
 module add  xz
