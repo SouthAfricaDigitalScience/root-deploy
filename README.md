@@ -8,7 +8,6 @@ scripts for building and testing root.
 
   * v5.34/34
   * v6.09.02
-  * v6.08
   * v6.10.00
 
 # Dependencies
@@ -21,6 +20,8 @@ scripts for building and testing root.
   *   sqlite
   *   freetype
   *   fftw
+  *   lzma
+  *   opeblas
 
 
 # Configuration
@@ -60,12 +61,12 @@ The following options are enabled :
     - [x]  Explicitly link with all dependent libraries explicitlink:BOOL=ON
     - [ ] Fail the configure step if a required external package is missing fail-on-missing:BOOL=OFF
     - [x] Fast Fourier Transform support, requires libfftw3 fftw3:BOOL=ON
-    - [ ] Read images and data from FITS files, requires cfitsio fitsio:BOOL=ON
-    - [ ] Enable the Fortran components of ROOT fortran:BOOL=ON
+    - [x] Read images and data from FITS files, requires cfitsio fitsio:BOOL=ON
+    - [x] Enable the Fortran components of ROOT fortran:BOOL=ON
     - [x] GDML writer and reader gdml:BOOL=OFF
     - [x] Build the new libGenVector library genvector:BOOL=ON
-    - [x] GFAL support, requires libgfal gfal:BOOL=ON
-    - [x] gLite support, requires libglite-api-wrapper v.3 from GSI (https://subversion.gsi.de/trac/dgrid/wiki) glite:BOOL=ON
+    - [ ] GFAL support, requires libgfal gfal:BOOL=ON
+    - [ ] gLite support, requires libglite-api-wrapper v.3 from GSI (https://subversion.gsi.de/trac/dgrid/wiki) glite:BOOL=ON
 
 // Globus authentication support, requires Globus toolkit
 globus:BOOL=OFF

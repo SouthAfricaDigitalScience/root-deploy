@@ -1,11 +1,9 @@
 #!/bin/bash -e
 # this should be run after check-build finishes.
 . /etc/profile.d/modules.sh
-echo ${SOFT_DIR}
-module add deploy
 module add cmake
 module add gcc/${GCC_VERSION}
-module add xz
+module add  xz
 module add gsl/2.3
 module add python/2.7.13-gcc-${GCC_VERSION}
 module add cfitsio
@@ -13,6 +11,11 @@ module add openssl/1.0.2j
 module add sqlite
 module add freetype
 module add fftw/3.3.4-gcc-${GCC_VERSION}-mpi-1.8.8
+module add openblas/0.2.19-gcc-${GCC_VERSION}
+
+mkdir -p ${WORKSPACE}
+mkdir -p ${SRC_DIR}
+mkdir -p ${SOFT_DIR}
 
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
@@ -42,6 +45,7 @@ cmake ../ -G"Unix Makefiles" \
 -Droottest=ON \
 -Dtest=ON
 
+OS="Linux" make
 
 make install
 echo "Creating the modules file directory ${HEP}"
