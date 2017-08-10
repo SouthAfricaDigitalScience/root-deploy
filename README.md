@@ -67,156 +67,54 @@ The following options are enabled :
     - [x] Build the new libGenVector library genvector:BOOL=ON
     - [ ] GFAL support, requires libgfal gfal:BOOL=ON
     - [ ] gLite support, requires libglite-api-wrapper v.3 from GSI (https://subversion.gsi.de/trac/dgrid/wiki) glite:BOOL=ON
-
-// Globus authentication support, requires Globus toolkit
-globus:BOOL=OFF
-
-// Do not automatically search for support libraries, but include X11
-gminimal:BOOL=OFF
-
-// Perform installation following the GNU guidelines
-gnuinstall:BOOL=OFF
-
-// Enable linking against shared libraries for GSL (default no)
-gsl_shared:BOOL=OFF
-
-// Graphs visualization support, requires graphviz
-gviz:BOOL=ON
-
-// HDFS support; requires libhdfs from HDFS >= 0.19.1
-hdfs:BOOL=ON
-
-// HTTP Server support
-http:BOOL=OFF
-
-// Kerberos5 support, requires Kerberos libs
-krb5:BOOL=ON
-
-// LDAP support, requires (Open)LDAP libs
-ldap:BOOL=ON
-
-// Build using libc++, requires cxx11 option (MacOS X only, for the time being)
-libcxx:BOOL=OFF
-
-// Build the new libMathMore extended math library, requires GSL (vers. >= 1.8)
-mathmore:BOOL=ON
-
-// A memory statistics utility, helps to detect memory leaks
-memstat:BOOL=ON
-
-// Do not automatically search for support libraries
-minimal:BOOL=OFF
-
-// Build the new libMinuit2 minimizer library
-minuit2:BOOL=OFF
-
-// Monalisa monitoring support, requires libapmoncpp
-monalisa:BOOL=ON
-
-// MySQL support, requires libmysqlclient
-mysql:BOOL=ON
-
-// ODBC support, requires libiodbc or libodbc
-odbc:BOOL=ON
-
-// OpenGL support, requires libGL and libGLU
-opengl:BOOL=ON
-
-// Oracle support, requires libocci
-oracle:BOOL=ON
-
-//  
-pch:BOOL=ON
-
-// PostgreSQL support, requires libpq
-pgsql:BOOL=ON
-
-// Pythia6 EG support, requires libPythia6
-pythia6:BOOL=ON
-
-// Delayed linking of Pythia6 library
-pythia6_nolink:BOOL=OFF
-
-// Pythia8 EG support, requires libPythia8
-pythia8:BOOL=ON
-
-// Python ROOT bindings, requires python >= 2.2
-python:BOOL=ON
-
-// Qt graphics backend, requires libqt >= 4.8
-qt:BOOL=OFF
-
-// GSI's Qt integration, requires libqt >= 4.8
-qtgsi:BOOL=OFF
-
-// Build the libReflex dictionary library
-reflex:BOOL=ON
-
-// RFIO support, requires libshift from CASTOR >= 1.5.2
-rfio:BOOL=ON
-
-// Build the libRooFit advanced fitting package
-roofit:BOOL=OFF
-
-// Set run-time library load path on executables and shared libraries (at installation area)
-rpath:BOOL=OFF
-
-// Ruby ROOT bindings, requires ruby >= 1.8
-ruby:BOOL=OFF
-
-// MaxDB/SapDB support, requires libsqlod and libsqlrte
-sapdb:BOOL=ON
-
-// Shadow password support
-shadowpw:BOOL=ON
-
-// Use shared 3rd party libraries if possible
-shared:BOOL=ON
-
-// Set version number in sonames (recommended)
-soversion:BOOL=OFF
-
-// SQLite support, requires libsqlite3
-sqlite:BOOL=ON
-
-// SRP support, requires SRP source tree
-srp:BOOL=ON
-
-// SSL encryption support, requires openssl
-ssl:BOOL=ON
-
-// Build libTable contrib library
-table:BOOL=OFF
-
-// Enable testing with CTest
-testing:BOOL=OFF
-
-// Using thread library (cannot be disabled)
-thread:BOOL=ON
-
-// Build TMVA multi variate analysis library
-tmva:BOOL=ON
-
-// UNURAN - package for generating non-uniform random numbers
-unuran:BOOL=OFF
-
-// Vc adds a few new types for portable and intuitive SIMD programming
-vc:BOOL=OFF
-
-// VDT adds a set of fast and vectorisable mathematical functions
-vdt:BOOL=ON
-
-// Link against the Windows debug runtime library
-winrtdebug:BOOL=OFF
-
-// X11 support
-x11:BOOL=ON
-
-// Xft support (X11 antialiased fonts)
-xft:BOOL=ON
-
-// XML parser interface
-xml:BOOL=ON
-
-// Build xrootd file server and its client (if supported)
-xrootd:BOOL=ON
+    - [ ] Globus authentication support, requires Globus toolkit globus:BOOL=OFF
+    - [ ] Do not automatically search for support libraries, but include X11 gminimal:BOOL=OFF
+    - [ ] Perform installation following the GNU guidelines gnuinstall:BOOL=OFF
+    - [ ] Enable linking against shared libraries for GSL (default no) gsl_shared:BOOL=OFF
+    - [x] Graphs visualization support, requires graphviz gviz:BOOL=ON
+    - [ ] HDFS support; requires libhdfs from HDFS >= 0.19.1 hdfs:BOOL=OFF
+    - [ ] HTTP Server support http:BOOL=OFF
+    - [ ]  Kerberos5 support, requires Kerberos libs krb5:BOOL=ON
+    - [x] LDAP support, requires (Open)LDAP libs ldap:BOOL=ON
+    - [ ] Build using libc++, requires cxx11 option (MacOS X only, for the time being) libcxx:BOOL=OFF
+    - [x] Build the new libMathMore extended math library, requires GSL (vers. >= 1.8) mathmore:BOOL=ON
+    - [x]  memory statistics utility, helps to detect memory leaks memstat:BOOL=ON
+    - [ ] Do not automatically search for support libraries minimal:BOOL=OFF
+    - [ ] Build the new libMinuit2 minimizer library minuit2:BOOL=OFF
+    - [ ] Monalisa monitoring support, requires libapmoncpp monalisa:BOOL=OFF
+    - [ ] MySQL support, requires libmysqlclient mysql:BOOL=ON
+    - [ ] ODBC support, requires libiodbc or libodbc odbc:BOOL=ON
+    - [ ] OpenGL support, requires libGL and libGLU opengl:BOOL=ON
+    - [ ] Oracle support, requires libocci oracle:BOOL=ON
+    - [ ]  pch:BOOL=ON
+    - [ ] PostgreSQL support, requires libpq pgsql:BOOL=ON
+    - [ ] Pythia6 EG support, requires libPythia6 pythia6:BOOL=OFF
+    - [ ] Delayed linking of Pythia6 library pythia6_nolink:BOOL=OF
+    - [ ] Pythia8 EG support, requires libPythia8 pythia8:BOOL=ON
+    - [x] Python ROOT bindings, requires python >= 2.2 python:BOOL=ON
+    - [ ] Qt graphics backend, requires libqt >= 4.8 qt:BOOL=OFF
+    - [ ] GSI's Qt integration, requires libqt >= 4.8 qtgsi:BOOL=OFF
+    - [ ] Build the libReflex dictionary library reflex:BOOL=ON
+    - [ ] RFIO support, requires libshift from CASTOR >= 1.5.2 rfio:BOOL=OFF
+    - [ ] Build the libRooFit advanced fitting package roofit:BOOL=OFF
+    - [ ] Set run-time library load path on executables and shared libraries (at installation area) rpath:BOOL=OFF
+    - [ ] Ruby ROOT bindings, requires ruby >= 1.8 ruby:BOOL=OFF
+    - [ ] MaxDB/SapDB support, requires libsqlod and libsqlrte sapdb:BOOL=OFF
+    - [x] Shadow password support shadowpw:BOOL=ON
+    - [x] Use shared 3rd party libraries if possible shared:BOOL=ON
+    - [ ] Set version number in sonames (recommended) soversion:BOOL=OFF
+    - [x] SQLite support, requires libsqlite3 sqlite:BOOL=ON
+    - [ ] SRP support, requires SRP source tree srp:BOOL=OFF
+    - [x] SSL encryption support, requires openssl ssl:BOOL=ON
+    - [ ] Build libTable contrib library table:BOOL=OFF
+    - [x] Enable testing with CTest testing:BOOL=ON
+    - [x] Using thread library (cannot be disabled) thread:BOOL=ON
+    - [x]  Build TMVA multi variate analysis library tmva:BOOL=ON
+    - [ ] UNURAN - package for generating non-uniform random numbers unuran:BOOL=OFF
+    - [ ] Vc adds a few new types for portable and intuitive SIMD programming vc:BOOL=OFF
+    - [x] VDT adds a set of fast and vectorisable mathematical functions vdt:BOOL=ON
+    - [ ] Link against the Windows debug runtime library winrtdebug:BOOL=OFF
+    - [ ] X11 support x11:BOOL=OFF
+    - [ ] Xft support (X11 antialiased fonts) xft:BOOL=OFF
+    - [x] XML parser interface xml:BOOL=ON
+    - [ ] Build xrootd file server and its client (if supported) xrootd:BOOL=OFF
