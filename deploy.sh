@@ -21,8 +21,10 @@ mkdir -p ${SOFT_DIR}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 rm -rf
-# Using CMAKE. See https://root.cern.ch/installing-root-source
+export CPPFLAGS="$CPPFLAGS -I${OPENSSL_DIR}/include -L${OPENSSL_DIR}/lib"
+export LDFLAGS="$LDFLAGS -L${OPENSSL_DIR}/lib"
 
+# Using CMAKE. See https://root.cern.ch/installing-root-source
 cmake ../ -G"Unix Makefiles" \
 -DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
@@ -66,9 +68,8 @@ setenv ROOT_VERSION       $VERSION
 setenv ROOT_DIR           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$GCC_VERSION
 setenv ROOTSYS           $::env(CVMFS_DIR)/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-$GCC_VERSION
 prepend-path LD_LIBRARY_PATH   $::env(ROOT_DIR)/lib
-prepend-path GCC_INCLUDE_DIR   $::env(ROOT_DIR)/include
-prepend-path CFLAGS            "-I${ROOT_DIR}/include"
-prepend-path LDFLAGS           "-L${ROOT_DIR}/lib"
+setenv CFLAGS            "-I${ROOT_DIR}/include ${CFLAGS}"
+setenv LDFLAGS           "-L${ROOT_DIR}/lib ${LDFLAGS}"
 prepend-path PATH              $::env(ROOT_DIR)/bin
 MODULE_FILE
 ) > ${HEP}/${NAME}/${VERSION}-gcc-${GCC_VERSION}

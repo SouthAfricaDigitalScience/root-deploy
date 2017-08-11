@@ -42,8 +42,10 @@ mkdir -p ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 tar xzf  ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE}/${NAME}-${VERSION} --skip-old-files --strip-components=1
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 
-# Using CMAKE. See https://root.cern.ch/installing-root-source
+export CPPFLAGS="$CPPFLAGS -I${OPENSSL_DIR}/include -L${OPENSSL_DIR}/lib"
+export LDFLAGS="$LDFLAGS -L${OPENSSL_DIR}/lib"
 
+# Using CMAKE. See https://root.cern.ch/installing-root-source
 cmake ../ -G"Unix Makefiles" \
 -DCMAKE_INSTALL_PREFIX=${SOFT_DIR}-gcc-${GCC_VERSION} \
 -Dbuiltin_freetype=OFF \
