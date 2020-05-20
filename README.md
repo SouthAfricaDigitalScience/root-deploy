@@ -6,15 +6,14 @@ scripts for building and testing root.
 
 # Versions
 
-  * v5.34/34
-  * v6.09.02
-  * v6.10.00
+  * v6.18.04
+  * v6.20.04
 
 # Dependencies
 
   *   gcc
   *   gsl
-  *   python/2.7.13
+  *   python/3.6
   *   cfitsio
   *   openssl
   *   sqlite
@@ -25,7 +24,7 @@ scripts for building and testing root.
 
 
 # Configuration
-
+ 
 The following options are enabled :
 
   - [x] freetype:
@@ -51,12 +50,13 @@ The following options are enabled :
     - [ ] CASTOR support, requires libshift from CASTOR >= 1.5.2
     - [x] Chirp support (Condor remote I/O), requires libchirp_client chirp:BOOL=ON
     - [x] Build the libCintex Reflex interface library cintex:BOOL=ON
-    - [ ] Enable new CLING C++ interpreter cling:BOOL=OFF
+    - [x] Enable new CLING C++ interpreter cling:BOOL=ON
     - [ ] Use native Cocoa/Quartz graphics backend (MacOS X only) cocoa:BOOL=OFF
-    - [ ] Build using C++11 compatible mode, requires gcc > 4.7.x or clang cxx11:BOOL=OFF
-    - [ ] Build using C++14 compatible mode, requires gcc > 4.9.x or clang cxx14:BOOL=OFF
+    - [x] Build using C++11 compatible mode, requires gcc > 4.7.x or clang cxx11:BOOL=ON
+    - [x] Build using C++14 compatible mode, requires gcc > 4.9.x or clang cxx14:BOOL=ON
+    - [x] Build using C++17 compatible mode, requires gcc > 4.9.x or clang cxx17:BOOL=ON
     - [x] DavIx library for HTTP/WEBDAV access davix:BOOL=ON
-    - [x] dCache support, requires libdcap from DESY dcache:BOOL=ON
+    - [ ] dCache support, requires libdcap from DESY dcache:BOOL=ON
     - [x] Turn on compiler exception handling capability exceptions:BOOL=ON
     - [x]  Explicitly link with all dependent libraries explicitlink:BOOL=ON
     - [ ] Fail the configure step if a required external package is missing fail-on-missing:BOOL=OFF
